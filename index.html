@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="form-container">
+                <h1>Easy Request Demonstartion</h1>
+                <form class="form" id="auth-form">
+                    <div class="form-control">
+                        <label for="auth-email">Email</label>
+                        <input type="email" name="email" id="auth-email" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="auth-password">Password</label>
+                        <input type="password" name="password" id="auth-password" required />
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="button" id="form-submit">
+                            Enter
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="notification" id="notification">test</div>
+    </main>
+    <script src="./script.js" defer></script>
+</body>
+</html>
