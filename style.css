@@ -135,10 +135,10 @@ body * {
     transform: translateX(0%);
 }
 
-.notification.success {
-    background-color: var(--green);
-}
-
 .notification.error {
     background-color: var(--red);
+}
+
+.notification.success {
+    background-color: var(--green);
 }

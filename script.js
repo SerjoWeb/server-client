@@ -56,6 +56,8 @@
 
         const timeout = setTimeout(() => {
           notify.classList.remove("shown");
+          notify.classList.remove(type);
+          notify.innerText = "";
         }, 7000);
 
         return () => clearTimeout(timeout);
