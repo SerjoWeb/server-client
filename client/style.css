@@ -1,0 +1,144 @@
+:root {
+    --white: #ffffff;
+    --gray: #fafaf9;
+    --gray-border: #a6a09b;
+    --sky: #0084d1;
+    --sky-dark: #0069a8;
+    --green: #00c951;
+    --red: #e7000b;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: var(--gray);
+    position: relative;
+    overflow-x: hidden;
+}
+
+body * {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.wrapper {
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form-container {
+    height: auto;
+    width: 100%;
+    max-width: 28.75rem;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 0 0.063rem 0.188rem 0 rgb(0 0 0 / 0.1), 0 0.063rem 0.125rem -0.063rem rgb(0 0 0 / 0.1);
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+}
+
+.wrapper .form-container h1 {
+    font-size: 1.125rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem 0;
+    margin-top: 1.875rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem 0;
+}
+
+.form-control label {
+    font-size: 0.75rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.form-control input {
+    width: 100%;
+    border: thin solid var(--gray-border);
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.25rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.form-control input:focus {
+    outline: 0.125rem solid var(--sky);
+    border-color: transparent;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0 0.313rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--sky);
+    color: var(--white);
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.button:hover {
+    background-color: var(--sky-dark);
+}
+
+.notification {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 10;
+    width: 100%;
+    max-width: max-content;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--white);
+    transform: translateX(200%);
+    box-shadow: 0 0.063rem 0.188rem 0 rgb(0 0 0 / 0.1), 0 0.063rem 0.125rem -0.063rem rgb(0 0 0 / 0.1);
+    border-radius: 0.25rem;
+    padding: 0.625rem 1.25rem;
+}
+
+.notification.shown {
+    transform: translateX(0%);
+}
+
+.notification.success {
+    background-color: var(--green);
+}
+
+.notification.error {
+    background-color: var(--red);
+}
